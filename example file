@@ -1,0 +1,23 @@
+CloudantClient clc = ClientBuilder.account("1ec55511-34bf-4ab5-8614-29e968fdc3cc-bluemix").username("1ec55511-34bf-4ab5-8614-29e968fdc3cc-bluemix").password("d0030b05ab5c5ac8f49aacea6b55c89e31398dcbfed2cb4d9736a0a569b6c4e6").build();
+
+
+<dependency>
+	<groupId>com.cloudant</groupId>
+	<artifactId>cloudant-client</artifactId>
+	<version>2.7.0</version>
+</dependency>
+
+
+//example
+CloudantClient cc = ClientBuilder.account("1ec55511-34bf-4ab5-8614-29e968fdc3cc-bluemix")
+	            .username("1ec55511-34bf-4ab5-8614-29e968fdc3cc-bluemix")
+	            .password("d0030b05ab5c5ac8f49aacea6b55c89e31398dcbfed2cb4d9736a0a569b6c4e6")
+	            .build();
+System.out.println("Congratulations! You are now connected to Cloudant");
+Database db = cc.database("chatbot_qa", false);
+		
+ChatbotQA qa = db.find(ChatbotQA.class,"CMT");
+//if(qa.isBrief()==true)
+System.out.println(qa.getDescription());
+//else
+// System.out.println("We do not have brief information on CMT. We have detailed one");
