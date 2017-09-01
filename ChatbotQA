@@ -1,0 +1,61 @@
+package com.ibm.cto;
+
+public class ChatbotQA {
+	private String _id = null;
+	private String _rev = null;
+	private boolean brief;
+	private boolean detail;
+	private String description;
+	private String title;
+	private String[] synonyms;
+	
+	public String get_id() {
+		return _id;
+	}
+	public void set_id(String _id) {
+		this._id = _id;
+	}
+	public String get_rev() {
+		return _rev;
+	}
+	public void set_rev(String _rev) {
+		this._rev = _rev;
+	}
+	public boolean isBrief() {
+		return brief;
+	}
+	public void setBrief(boolean brief) {
+		this.brief = brief;
+	}
+	public boolean isDetail() {
+		return detail;
+	}
+	public void setDetail(boolean detail) {
+		this.detail = detail;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String[] getSynonyms() {
+		return synonyms;
+	}
+	public void setSynonyms(String[] synonyms) {
+		this.synonyms = synonyms;
+	}
+	
+	public String toString(){
+		return "id : "+ _id+" _rev : "+_rev+ " brief : "+brief +" detail : "+detail +" title : "+title +" description : "+ description+ " synonyms : "+synonyms;
+	}
+  
+
+
+}
